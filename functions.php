@@ -34,7 +34,7 @@ function calculator_block_render_callback($block) {
 function save_calculation() {
     if(isset($_POST['calculation'])) {
         $calculation = sanitize_text_field($_POST['calculation']);
-        $result = sanitize_text_field($_POST['result']);
+        $result = sanitize_text_field($_POST['result']); 
         $date = date('Y-m-d H:i:s');
         $ip = $_SERVER['REMOTE_ADDR'];
         $file = fopen(get_template_directory() . '/calculations.csv', 'a');
